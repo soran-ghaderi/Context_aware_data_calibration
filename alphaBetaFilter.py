@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def alphaBetaFilter(x, alpha, beta):
+def alphaBetaFilter(x: list, alpha: float = 1, beta: float = 0.1) -> list:
     """
     A simplified form of observer for estimation, data smoothing and control applications.
 
@@ -12,7 +12,7 @@ def alphaBetaFilter(x, alpha, beta):
      otherwise, set the initial state values to zero.
     Select values of the alpha and beta correction gains.
     Update: Repeat for each time step ΔT.
-    :param x:
+    :param x: Initial sample
     :param alpha: Alpha factor
     :param beta: Beta factor
     :return: Generated results
