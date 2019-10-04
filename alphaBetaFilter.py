@@ -25,3 +25,4 @@ def alphaBetaFilter(x, alpha, beta):
         xk_1 = xk
         vk_1 = vk
         f[i] = xk
+    return f
