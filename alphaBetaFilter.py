@@ -3,6 +3,14 @@ import numpy as np
 def alphaBetaFilter(x, alpha, beta):
     """
     A simplified form of observer for estimation, data smoothing and control applications.
+
+    A simplified form of observer for estimation, data smoothing and control applications.
+    Algorithm summary:
+    Initialize:
+    Set the initial values of state estimates x and v, using prior information or additional measurements;
+     otherwise, set the initial state values to zero.
+    Select values of the alpha and beta correction gains.
+    Update: Repeat for each time step ΔT.
     :param x:
     :param alpha:
     :param beta:
