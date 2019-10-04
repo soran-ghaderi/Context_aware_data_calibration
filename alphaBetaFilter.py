@@ -12,9 +12,9 @@ def alphaBetaFilter(x, alpha, beta):
     Select values of the alpha and beta correction gains.
     Update: Repeat for each time step ΔT.
     :param x:
-    :param alpha:
-    :param beta:
-    :return:
+    :param alpha: Alpha factor
+    :param beta: Beta factor
+    :return: Generated results
     """
     # x = np.array(x)
     n = x.__len__()
