@@ -2,7 +2,7 @@ import numpy as np
 
 def alphaBetaFilter(x, alpha, beta):
     """
-
+    A simplified form of observer for estimation, data smoothing and control applications.
     :param x:
     :param alpha:
     :param beta:
