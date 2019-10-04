@@ -16,3 +16,12 @@ def alphaBetaFilter(x, alpha, beta):
     vk = 0
     rk = 0
     f = np.zeros((n,), dtype=int)
+    for i in range(n):
+        xk = xk_1 + vk_1
+        vk = vk_1
+        rk = x[i] - xk
+        xk = alpha * rk + xk
+        vk = vk + (beta * rk)
+        xk_1 = xk
+        vk_1 = vk
+        f[i] = xk
