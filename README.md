@@ -10,3 +10,5 @@ The first part of which has been re-implemented so far.
   author={Mohammad Mahdi Bejani and Mehdi Ghatee},
   year={2018}
 }
+
+# https://doi.org/10.1016/j.trc.2018.02.009
