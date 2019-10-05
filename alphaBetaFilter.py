@@ -2,7 +2,7 @@ import numpy as np
 
 
 def alphaBetaFilter(
-        x: list,
+        init_sample: list,
         alpha: float = 1,
         beta: float = 0.1) -> list:
     """
@@ -20,10 +20,10 @@ def alphaBetaFilter(
     :param beta: Beta factor
     :return: Generated results
     """
-    n = x.__len__()
+    n = init_sample.__len__()
     xk_1 = 0
     vk_1 = 0
-    f = np.zeros((n,), dtype=int)
+    prediction = np.zeros((n,), dtype=int)
     for i in range(n):
         xk = xk_1 + vk_1
         vk = vk_1
@@ -32,5 +32,5 @@ def alphaBetaFilter(
         vk = vk + (beta * rk)
         xk_1 = xk
         vk_1 = vk
-        f[i] = xk
-    return f
+        prediction[i] = xk
+    return prediction
