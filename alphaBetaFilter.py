@@ -15,10 +15,10 @@ def alphaBetaFilter(
      otherwise, set the initial state values to zero.
     Select values of the alpha and beta correction gains.
     Update: Repeat for each time step ΔT.
-    :param x: Initial sample
+    :param init_sample: Initial sample
     :param alpha: Alpha factor
     :param beta: Beta factor
-    :return: Generated results
+    :return: Predicted results
     """
     sample_lenth = init_sample.__len__()
     xk_1 = 0
