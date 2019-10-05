@@ -1,7 +1,10 @@
 import numpy as np
 
 
-def alphaBetaFilter(x: list, alpha: float = 1, beta: float = 0.1) -> list:
+def alphaBetaFilter(
+        x: list,
+        alpha: float = 1,
+        beta: float = 0.1) -> list:
     """
     A simplified form of observer for estimation, data smoothing and control applications.
 
