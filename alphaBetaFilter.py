@@ -20,7 +20,6 @@ def alphaBetaFilter(
     :param beta: Beta factor
     :return: Generated results
     """
-    # x = np.array(x)
     n = x.__len__()
     xk_1 = 0
     vk_1 = 0
