@@ -20,11 +20,11 @@ def alphaBetaFilter(
     :param beta: Beta factor
     :return: Generated results
     """
-    n = init_sample.__len__()
+    sample_lenth = init_sample.__len__()
     xk_1 = 0
     vk_1 = 0
-    prediction = np.zeros((n,), dtype=int)
-    for i in range(n):
+    predicted = np.zeros((sample_lenth,), dtype=int)
+    for i in range(sample_lenth):
         xk = xk_1 + vk_1
         vk = vk_1
         rk = x[i] - xk
@@ -32,5 +32,5 @@ def alphaBetaFilter(
         vk = vk + (beta * rk)
         xk_1 = xk
         vk_1 = vk
-        prediction[i] = xk
-    return prediction
+        predicted[i] = xk
+    return predicted
