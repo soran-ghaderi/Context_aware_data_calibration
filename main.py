@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import math
 import pandas as pd
@@ -17,7 +18,7 @@ mse_sum = np.zeros((6,), dtype=int)
 b_mse_sum = np.zeros((6,), dtype=int)
 dtw_sum = np.zeros((6,), dtype=int)
 b_dtw_sum = np.zeros((6,), dtype=int)
-iter = 0
+iter_num = 0
 index = 330
 # --------------------------------
 acc = np.array([input_data['ACCELEROMETER X (m/sÂ²)']
@@ -32,11 +33,6 @@ speed = np.array([input_data['LOCATION Speed ( Kmh)']])
 
 
 # --------------------------------
-def prand():
-    r = rd.random() / 2 + 0.5
-    return r
-
-
 def increaseSpeed(speed):
     n = speed.__len__()
     c = 0
@@ -70,9 +66,9 @@ def makeXZero(ax, az):
 
 # --------------------------------
 for k in range(100):
-    teta_x = 2 * math.pi * rd.random()
-    teta_y = 2 * math.pi * rd.random()
-    teta_z = 2 * math.pi * rd.random()
+    teta_x = 2 * math.pi * float(os.urandom(10)/10)
+    teta_y = 2 * math.pi * float(os.urandom(10)/10)
+    teta_z = 2 * math.pi * float(os.urandom(10)/10)
     print("random degrees:\nteta_x: {}\nteta_y: {}\nteta_z: {}\n".format(teta_x, teta_y, teta_z))
     oAcc = reorientation(acc, teta_x, teta_y, teta_z)
     oMag = reorientation(mag, teta_x, teta_y, teta_z)
@@ -111,7 +107,7 @@ for k in range(100):
     # plt.show()
     print("final cross correlation is: {}".format((np.mean(np.correlate(mag[1], oMag[1])) + 1) / 2))
     print(np.mean(oAcc[2]))
-    iter = iter + 1
+    iter_num = iter_num + 1
     for i in range(3):
         summation[i] = (np.mean(np.correlate(alphaBetaFilter(acc[i], 0.01, 0),
                                              alphaBetaFilter(oAcc[i], 0.01, 0)))) / 2 + summation[i]
@@ -122,14 +118,14 @@ for k in range(100):
         summation[i + 3] = (np.mean(np.correlate(mag[i], oMag[i])) + 1) / 2 + summation[i + 3]
         mse_sum[i + 3] = mse_sum[i + 3] + devMse(mag[i], oMag[i])
         dtw_sum[i + 3] = dtw.distance(mag[i], oMag[i]) + dtw_sum[i + 3]
-    print(iter)
+    print(iter_num)
     print('====&final result&=====')
     print('cross correlation:')
     for i in range(6):
-        print(i, ') ', summation[i] / iter)
+        print(i, ') ', summation[i] / iter_num)
     print('MSE:')
     for i in range(6):
         print(i, ') ', mse_sum[i] / b_mse_sum[i])
     print('DTW:')
     for i in range(6):
-        print(i, ') ', dtw_sum[i] / iter)
+        print(i, ') ', dtw_sum[i] / iter_num)
