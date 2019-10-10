@@ -2,7 +2,6 @@ import os
 import numpy as np
 import math
 import pandas as pd
-import random as rd
 from sklearn.metrics import mean_squared_error as mse
 from dtaidistance import dtw
 
@@ -66,9 +65,9 @@ def makeXZero(ax, az):
 
 # --------------------------------
 for k in range(100):
-    teta_x = 2 * math.pi * float(os.urandom(10)/10)
-    teta_y = 2 * math.pi * float(os.urandom(10)/10)
-    teta_z = 2 * math.pi * float(os.urandom(10)/10)
+    teta_x = 2 * math.pi * float(os.urandom(10) / 10)
+    teta_y = 2 * math.pi * float(os.urandom(10) / 10)
+    teta_z = 2 * math.pi * float(os.urandom(10) / 10)
     print("random degrees:\nteta_x: {}\nteta_y: {}\nteta_z: {}\n".format(teta_x, teta_y, teta_z))
     oAcc = reorientation(acc, teta_x, teta_y, teta_z)
     oMag = reorientation(mag, teta_x, teta_y, teta_z)
