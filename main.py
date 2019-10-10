@@ -1,4 +1,4 @@
-import os
+import secrets
 import numpy as np
 import math
 import pandas as pd
@@ -65,9 +65,9 @@ def makeXZero(ax, az):
 
 # --------------------------------
 for k in range(100):
-    teta_x = 2 * math.pi * float(os.urandom(10) / 10)
-    teta_y = 2 * math.pi * float(os.urandom(10) / 10)
-    teta_z = 2 * math.pi * float(os.urandom(10) / 10)
+    teta_x = 2 * math.pi * secrets.SystemRandom().random()
+    teta_y = 2 * math.pi * secrets.SystemRandom().random()
+    teta_z = 2 * math.pi * secrets.SystemRandom().random()
     print("random degrees:\nteta_x: {}\nteta_y: {}\nteta_z: {}\n".format(teta_x, teta_y, teta_z))
     oAcc = reorientation(acc, teta_x, teta_y, teta_z)
     oMag = reorientation(mag, teta_x, teta_y, teta_z)
