@@ -14,3 +14,4 @@ def devMse(x, y):
     for i in range(n):
         summation = summation + math.pow((x[i] - y[i]), 2)
     summation = summation / n
+    return summation
