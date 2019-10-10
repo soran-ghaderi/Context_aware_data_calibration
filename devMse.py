@@ -2,10 +2,10 @@ import math
 
 def devMse(x, y):
     """
-
+    Mean squared error division.
     :param x:
     :param y:
-    :return:
+    :return: MSE result
     """
     # x = np.array(x)
     # y = np.array(y)
