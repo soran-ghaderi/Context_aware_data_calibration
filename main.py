@@ -64,7 +64,7 @@ def makeXZero(ax, az):
 
 
 # --------------------------------
-for k in range(100):
+for k in range(2):
     teta_x = 2 * math.pi * secrets.SystemRandom().random()
     teta_y = 2 * math.pi * secrets.SystemRandom().random()
     teta_z = 2 * math.pi * secrets.SystemRandom().random()
