@@ -10,7 +10,7 @@ class TestReorientation(TestCase):
     def test_reorientation(self):
         '''
 
-        :return: Whether the 'res' is None or not?-
+        :return: Whether the 'res' is None or not?
         '''
         teta_x = 2 * math.pi * rd.random()
         teta_y = 2 * math.pi * rd.random()
