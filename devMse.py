@@ -1,6 +1,8 @@
 import math
 
-def devMse(x, y):
+def devMse(
+        x: list = [],
+        y: list = []):
     """
     Mean squared error division.
     :param x:
