@@ -5,6 +5,10 @@ from devMse import devMse
 
 class TestDevMse(unittest.TestCase):
     def test_devMse(self):
+        '''
+
+        :return: Whether the 'res' is None or not?
+        '''
         x = np.random.rand(6, 1)
         y = np.random.rand(6,1)
         res = devMse(x, y)
