@@ -1,5 +1,6 @@
 import math
 
+
 def devMse(
         x: list = [],
         y: list = []) -> float:
