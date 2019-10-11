@@ -2,7 +2,7 @@ import math
 
 def devMse(
         x: list = [],
-        y: list = []):
+        y: list = []) -> float:
     """
     Mean squared error division.
     :param x:
