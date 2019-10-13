@@ -7,7 +7,7 @@ def devMse(
     """
     Measures the average of the squares of the errors
     :param y_true: Ground truth (correct) target values.
-    :param y_pred:
+    :param y_pred: Estimated target values.
     :return: MSE result
     """
     n = min(x.__len__(), y.__len__())
