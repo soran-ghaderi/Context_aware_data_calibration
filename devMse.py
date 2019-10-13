@@ -14,5 +14,5 @@ def devMse(
     summation = 0
     for i in range(n):
         summation = summation + math.pow((y_true[i] - y_pred[i]), 2)
-    summation = summation / n
-    return summation
+    mse = summation / n
+    return mse
