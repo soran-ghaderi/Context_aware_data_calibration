@@ -2,8 +2,8 @@ import math
 
 
 def devMse(
-        y_true: list = [],
-        y_pred: list = []) -> float:
+        y_true: list,
+        y_pred: list) -> float:
     """
     Measures the average of the squares of the errors
     :param y_true: Ground truth (correct) target values.
