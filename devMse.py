@@ -6,8 +6,8 @@ def devMse(
         y_pred: list = []) -> float:
     """
     Measures the average of the squares of the errors
-    :param x:
-    :param y:
+    :param y_true: Ground truth (correct) target values.
+    :param y_pred:
     :return: MSE result
     """
     n = min(x.__len__(), y.__len__())
