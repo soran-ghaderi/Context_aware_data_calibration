@@ -10,9 +10,9 @@ def devMse(
     :param y_pred: Estimated target values.
     :return: MSE result
     """
-    minimum_lenth = min(x.__len__(), y.__len__())
+    minimum_lenth = min(y_true.__len__(), y_pred.__len__())
     summation = 0
-    for i in range(n):
+    for i in range(minimum_lenth):
         summation = summation + math.pow((y_true[i] - y_pred[i]), 2)
     mse = summation / minimum_lenth
     return mse
