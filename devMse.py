@@ -2,10 +2,10 @@ import math
 
 
 def devMse(
-        x: list = [],
-        y: list = []) -> float:
+        y_true: list = [],
+        y_pred: list = []) -> float:
     """
-    Mean squared error division.
+    Measures the average of the squares of the errors
     :param x:
     :param y:
     :return: MSE result
@@ -13,6 +13,6 @@ def devMse(
     n = min(x.__len__(), y.__len__())
     summation = 0
     for i in range(n):
-        summation = summation + math.pow((x[i] - y[i]), 2)
+        summation = summation + math.pow((y_true[i] - y_pred[i]), 2)
     summation = summation / n
     return summation
