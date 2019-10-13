@@ -8,7 +8,8 @@ def devMse(
     Measures the average of the squares of the errors
     :param y_true: Ground truth (correct) target values.
     :param y_pred: Estimated target values.
-    :return: MSE result
+    :return: MSE : float
+        A non-negative floating point value (the best value is 0.0)
     """
     minimum_lenth = min(y_true.__len__(), y_pred.__len__())
     summation = 0
