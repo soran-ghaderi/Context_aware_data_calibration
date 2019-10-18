@@ -16,3 +16,6 @@ def reorientation(v, teta_x, teta_y, teta_z):
     R_y = np.array([[math.cos(teta_y), 0, -math.sin(teta_y)],
                     [0, 1, 0],
                     [math.sin(teta_y), 0, math.cos(teta_y)]])
+    R_z = np.array([[math.cos(teta_z), -math.sin(teta_z), 0],
+                    [math.sin(teta_z), math.cos(teta_z), 0],
+                    [0, 0, 1]])
