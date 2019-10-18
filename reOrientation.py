@@ -19,3 +19,5 @@ def reorientation(v, teta_x, teta_y, teta_z):
     R_z = np.array([[math.cos(teta_z), -math.sin(teta_z), 0],
                     [math.sin(teta_z), math.cos(teta_z), 0],
                     [0, 0, 1]])
+    R = np.matmul(R_x, R_y, R_z)
+    v_o = np.matmul(R, v)
