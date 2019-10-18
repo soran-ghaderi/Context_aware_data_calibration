@@ -1,7 +1,11 @@
 import math
 import numpy as np
 
-def reorientation(v, teta_x, teta_y, teta_z):
+def reorientation(
+        v: list[list],
+        teta_x: float,
+        teta_y: float,
+        teta_z: float) -> list[list]:
     """
     Accelerometer calibration.
     :param v:
