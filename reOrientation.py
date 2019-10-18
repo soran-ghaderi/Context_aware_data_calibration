@@ -12,7 +12,7 @@ def reorientation(
     :param teta_x:
     :param teta_y:
     :param teta_z:
-    :return:
+    :return: Velocity - matrix
     """
     R_x = np.array([[1, 0, 0],
                     [0, math.cos(teta_x), -math.sin(teta_x)],
