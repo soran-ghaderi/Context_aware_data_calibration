@@ -26,3 +26,5 @@ acc = np.array([input_data['ACCELEROMETER X (m/sÂ²)']
 mag = np.array([input_data['MAGNETIC FIELD X (Î¼T)']
                    , input_data['MAGNETIC FIELD Y (Î¼T)']
                    , input_data['MAGNETIC FIELD Z (Î¼T)']])
+
+speed = np.array([input_data['LOCATION Speed ( Kmh)']])
