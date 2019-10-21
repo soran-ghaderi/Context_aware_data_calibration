@@ -18,3 +18,7 @@ dtw_sum = np.zeros((6,), dtype=int)
 b_dtw_sum = np.zeros((6,), dtype=int)
 iter_num = 0
 index = 330
+
+acc = np.array([input_data['ACCELEROMETER X (m/sÂ²)']
+                   , input_data['ACCELEROMETER Y (m/sÂ²)']
+                   , input_data['ACCELEROMETER Z (m/sÂ²)']])
