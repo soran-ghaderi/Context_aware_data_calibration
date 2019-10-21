@@ -22,3 +22,7 @@ index = 330
 acc = np.array([input_data['ACCELEROMETER X (m/sÂ²)']
                    , input_data['ACCELEROMETER Y (m/sÂ²)']
                    , input_data['ACCELEROMETER Z (m/sÂ²)']])
+
+mag = np.array([input_data['MAGNETIC FIELD X (Î¼T)']
+                   , input_data['MAGNETIC FIELD Y (Î¼T)']
+                   , input_data['MAGNETIC FIELD Z (Î¼T)']])
