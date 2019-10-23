@@ -28,3 +28,10 @@ mag = np.array([input_data['MAGNETIC FIELD X (Î¼T)']
                    , input_data['MAGNETIC FIELD Z (Î¼T)']])
 
 speed = np.array([input_data['LOCATION Speed ( Kmh)']])
+
+def increaseSpeed(speed):
+    """
+
+    :param speed:
+    :return:
+    """
