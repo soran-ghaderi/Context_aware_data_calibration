@@ -33,7 +33,7 @@ speed = np.array([input_data['LOCATION Speed ( Kmh)']])
 def increaseSpeed(speed):
     """
 
-    :param speed:
+    :param speed: A list of speeds at each point
     :return:
     """
     number_of_points = speed.__len__()
@@ -42,7 +42,7 @@ def increaseSpeed(speed):
         speed_change = speed(i + 1) - speed(i)
     speed_change = speed_change / (number_of_points - 1)
     if speed_change > 0:
-        r = 1
+        has_increase = 1
     else:
-        r = -1
-    return r
+        has_increase = -1
+    return has_increase
