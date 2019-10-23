@@ -35,3 +35,12 @@ def increaseSpeed(speed):
     :param speed:
     :return:
     """
+    n = speed.__len__()
+    c = 0
+    for i in range(n - 1):
+        c = speed(i + 1) - speed(i)
+    c = c / (n - 1)
+    if c > 0:
+        r = 1
+    else:
+        r = -1
