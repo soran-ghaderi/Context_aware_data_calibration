@@ -44,3 +44,4 @@ def increaseSpeed(speed):
         r = 1
     else:
         r = -1
+    return r
