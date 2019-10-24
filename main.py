@@ -49,14 +49,14 @@ def increaseSpeed(speed: list) -> int:
 
 def makeYZero(ay, az):
     """
-    Calculate teta_x angle
+    Calculate theta_x angle
     :param ay: A list of Y-axis accelerations
     :param az: A list of Z-axis accelerations
     :return: Theta_x angle
     """
     avgy = np.mean(ay)
     avgz = np.mean(az)
-    teta_x = math.atan(avgy / avgz)
-    if abs(teta_x) < 0.1:
-        teta_x = 0
-    return teta_x
+    theta_x = math.atan(avgy / avgz)
+    if abs(theta_x) < 0.1:
+        theta_x = 0
+    return theta_x
