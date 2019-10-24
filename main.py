@@ -49,10 +49,10 @@ def increaseSpeed(speed: list) -> int:
 
 def makeYZero(ay, az):
     """
-
-    :param ay:
-    :param az:
-    :return:
+    Calculate teta_x angle
+    :param ay: A list of Y-axis accelerations
+    :param az: A list of Z-axis accelerations
+    :return: Theta_x angle
     """
     avgy = np.mean(ay)
     avgz = np.mean(az)
