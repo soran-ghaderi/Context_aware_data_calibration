@@ -54,3 +54,8 @@ def makeYZero(ay, az):
     :param az:
     :return:
     """
+    avgy = np.mean(ay)
+    avgz = np.mean(az)
+    teta_x = math.atan(avgy / avgz)
+    if abs(teta_x) < 0.1:
+        teta_x = 0
