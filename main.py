@@ -47,7 +47,7 @@ def increaseSpeed(speed: list) -> int:
         has_increase = -1
     return has_increase
 
-def makeYZero(ay, az):
+def makeYZero(ay: list, az: list) -> float:
     """
     Calculate theta_x angle
     :param ay: A list of Y-axis accelerations
