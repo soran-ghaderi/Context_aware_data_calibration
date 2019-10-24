@@ -59,3 +59,4 @@ def makeYZero(ay, az):
     teta_x = math.atan(avgy / avgz)
     if abs(teta_x) < 0.1:
         teta_x = 0
+    return teta_x
