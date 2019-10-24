@@ -46,3 +46,11 @@ def increaseSpeed(speed: list) -> int:
     else:
         has_increase = -1
     return has_increase
+
+def makeYZero(ay, az):
+    """
+
+    :param ay:
+    :param az:
+    :return:
+    """
