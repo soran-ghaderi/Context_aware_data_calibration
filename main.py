@@ -30,7 +30,7 @@ mag = np.array([input_data['MAGNETIC FIELD X (Î¼T)']
 speed = np.array([input_data['LOCATION Speed ( Kmh)']])
 
 
-def increaseSpeed(speed):
+def increaseSpeed(speed: list):
     """
     Returns 1 if the overal speed has increased otherwise returns -1.
     :param speed: A list of speeds at each point
