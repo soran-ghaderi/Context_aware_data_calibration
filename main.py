@@ -32,9 +32,9 @@ speed = np.array([input_data['LOCATION Speed ( Kmh)']])
 
 def increaseSpeed(speed):
     """
-
+    Returns 1 if the overal speed has increased otherwise returns -1.
     :param speed: A list of speeds at each point
-    :return:
+    :return: Has the speed increased or not (1, -1)
     """
     number_of_points = speed.__len__()
     speed_change = 0
