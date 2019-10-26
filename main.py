@@ -72,7 +72,7 @@ def makeXZero(ax: list, az: lsit) -> float:
     """
     avgx = np.mean(ax)
     avgz = np.mean(az)
-    teta_y = math.atan(avgx / avgz)
-    if abs(teta_y) < 0.1:
-        teta_y = 0
-    return teta_y
+    theta_y = math.atan(avgx / avgz)
+    if abs(theta_y) < 0.1:
+        theta_y = 0
+    return theta_y
