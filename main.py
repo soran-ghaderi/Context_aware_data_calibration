@@ -87,3 +87,6 @@ for k in range(2):
 
     for i in range(3):
         b_mse_sum[i] = b_mse_sum[i] + devMse(alphaBetaFilter(oAcc[i], 0.01, 0), alphaBetaFilter(acc[i], 0.01, 0))
+
+    for i in range(3):
+        b_mse_sum[i + 3] = b_mse_sum[i + 3] + mse(oMag[i], mag[i])
