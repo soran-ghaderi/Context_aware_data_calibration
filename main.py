@@ -90,3 +90,8 @@ for k in range(2):
 
     for i in range(3):
         b_mse_sum[i + 3] = b_mse_sum[i + 3] + mse(oMag[i], mag[i])
+
+    teta = makeYZero(oAcc[1, index:index + 50], oAcc[2, index:index + 50])
+    oAcc = reorientation(oAcc, teta, 0, 0)
+    oMag = reorientation(oMag, teta, 0, 0)
+    print('first teta: {}'.format(teta))
