@@ -100,3 +100,7 @@ for k in range(2):
     oAcc = reorientation(oAcc, teta, 0, 0)
     oMag = reorientation(oMag, teta, 0, 0)
     print('second teta: {}'.format(teta))
+
+    if np.mean(oAcc[2]) < 0:
+        oAcc = reorientation(oAcc, 0, math.pi, 0)
+        oMag = reorientation(oMag, 0, math.pi, 0)
