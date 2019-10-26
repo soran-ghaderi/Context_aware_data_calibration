@@ -73,3 +73,4 @@ def makeXZero(ax, az):
     teta_y = math.atan(avgx / avgz)
     if abs(teta_y) < 0.1:
         teta_y = 0
+    return teta_y
