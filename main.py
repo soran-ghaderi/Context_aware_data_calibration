@@ -60,3 +60,11 @@ def makeYZero(ay: list, az: list) -> float:
     if abs(theta_x) < 0.1:
         theta_x = 0
     return theta_x
+
+def makeXZero(ax, az):
+    """
+
+    :param ax:
+    :param az:
+    :return:
+    """
