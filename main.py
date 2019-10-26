@@ -84,3 +84,6 @@ for k in range(2):
     print("random degrees:\nteta_x: {}\nteta_y: {}\nteta_z: {}\n".format(teta_x, teta_y, teta_z))
     oAcc = reorientation(acc, teta_x, teta_y, teta_z)
     oMag = reorientation(mag, teta_x, teta_y, teta_z)
+
+    for i in range(3):
+        b_mse_sum[i] = b_mse_sum[i] + devMse(alphaBetaFilter(oAcc[i], 0.01, 0), alphaBetaFilter(acc[i], 0.01, 0))
