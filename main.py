@@ -76,3 +76,11 @@ def makeXZero(ax: list, az: lsit) -> float:
     if abs(theta_y) < 0.1:
         theta_y = 0
     return theta_y
+
+for k in range(2):
+    teta_x = 2 * math.pi * secrets.SystemRandom().random()
+    teta_y = 2 * math.pi * secrets.SystemRandom().random()
+    teta_z = 2 * math.pi * secrets.SystemRandom().random()
+    print("random degrees:\nteta_x: {}\nteta_y: {}\nteta_z: {}\n".format(teta_x, teta_y, teta_z))
+    oAcc = reorientation(acc, teta_x, teta_y, teta_z)
+    oMag = reorientation(mag, teta_x, teta_y, teta_z)
