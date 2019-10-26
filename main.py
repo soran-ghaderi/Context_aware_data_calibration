@@ -61,7 +61,7 @@ def makeYZero(ay: list, az: list) -> float:
         theta_x = 0
     return theta_x
 
-def makeXZero(ax, az):
+def makeXZero(ax: list, az: lsit) -> float:
     """
     Calculate theta_y angle
     :param ax: A list of X-axis accelerations
