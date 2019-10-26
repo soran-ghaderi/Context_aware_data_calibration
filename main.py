@@ -68,3 +68,8 @@ def makeXZero(ax, az):
     :param az:
     :return:
     """
+    avgx = np.mean(ax)
+    avgz = np.mean(az)
+    teta_y = math.atan(avgx / avgz)
+    if abs(teta_y) < 0.1:
+        teta_y = 0
