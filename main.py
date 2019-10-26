@@ -95,3 +95,8 @@ for k in range(2):
     oAcc = reorientation(oAcc, teta, 0, 0)
     oMag = reorientation(oMag, teta, 0, 0)
     print('first teta: {}'.format(teta))
+
+    teta = makeXZero(oAcc[0, index:index + 50], oAcc[2, index:index + 50])
+    oAcc = reorientation(oAcc, teta, 0, 0)
+    oMag = reorientation(oMag, teta, 0, 0)
+    print('second teta: {}'.format(teta))
