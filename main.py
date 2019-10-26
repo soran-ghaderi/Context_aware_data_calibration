@@ -63,10 +63,10 @@ def makeYZero(ay: list, az: list) -> float:
 
 def makeXZero(ax, az):
     """
-
-    :param ax:
-    :param az:
-    :return:
+    Calculate theta_y angle
+    :param ax: A list of X-axis accelerations
+    :param az: A list of Z-axis accelerations
+    :return: Theta_y angle
     """
     avgx = np.mean(ax)
     avgz = np.mean(az)
