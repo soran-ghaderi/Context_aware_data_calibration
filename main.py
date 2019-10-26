@@ -47,6 +47,7 @@ def increaseSpeed(speed: list) -> int:
         has_increase = -1
     return has_increase
 
+
 def makeYZero(ay: list, az: list) -> float:
     """
     Calculate theta_x angle
@@ -60,6 +61,7 @@ def makeYZero(ay: list, az: list) -> float:
     if abs(theta_x) < 0.1:
         theta_x = 0
     return theta_x
+
 
 def makeXZero(ax: list, az: lsit) -> float:
     """
