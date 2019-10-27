@@ -7,7 +7,7 @@ from dtaidistance import dtw
 
 from alpha_beta_filter import alphaBetaFilter
 from mse import devMse
-from reOrientation import reorientation
+from re_orientation import reorientation
 
 input_data = pd.read_excel(r'input.xlsx')
 

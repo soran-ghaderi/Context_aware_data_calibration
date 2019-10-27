@@ -1,7 +1,7 @@
 import secrets
 import math
 from unittest import TestCase
-from reOrientation import reorientation
+from re_orientation import reorientation
 import numpy as np
 
 
