@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from devMse import devMse
+from mse import devMse
 
 
 class TestDevMse(unittest.TestCase):

@@ -6,7 +6,7 @@ from sklearn.metrics import mean_squared_error as mse
 from dtaidistance import dtw
 
 from alphaBetaFilter import alphaBetaFilter
-from devMse import devMse
+from mse import devMse
 from reOrientation import reorientation
 
 input_data = pd.read_excel(r'input.xlsx')
