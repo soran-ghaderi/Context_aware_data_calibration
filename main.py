@@ -135,3 +135,7 @@ for k in range(2):
     print('cross correlation:')
     for i in range(6):
         print(i, ') ', summation[i] / iter_num)
+
+    print('MSE:')
+    for i in range(6):
+        print(i, ') ', mse_sum[i] / b_mse_sum[i])
