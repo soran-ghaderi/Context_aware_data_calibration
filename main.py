@@ -119,3 +119,9 @@ for k in range(2):
     print("final cross correlation is: {}".format((np.mean(np.correlate(mag[1], oMag[1])) + 1) / 2))
     print(np.mean(oAcc[2]))
     iter_num = iter_num + 1
+
+    for i in range(3):
+        summation[i] = (np.mean(np.correlate(alphaBetaFilter(acc[i], 0.01, 0),
+                                             alphaBetaFilter(oAcc[i], 0.01, 0)))) / 2 + summation[i]
+        mse_sum[i] = mse_sum[i] + devMse(alphaBetaFilter(acc[i], 0.01, 0), alphaBetaFilter(oAcc[i], 0.01, 0))
+        dtw_sum[i] = dtw.distance(alphaBetaFilter(acc[i], 0.01, 0), alphaBetaFilter(oAcc[i], 0.01, 0)) + dtw_sum[i]
