@@ -115,3 +115,7 @@ for k in range(2):
         oAcc = reorientation(oAcc, 0, 0, math.pi)
         oMag = reorientation(oMag, 0, 0, math.pi)
         print("turned")
+
+    print("final cross correlation is: {}".format((np.mean(np.correlate(mag[1], oMag[1])) + 1) / 2))
+    print(np.mean(oAcc[2]))
+    iter_num = iter_num + 1
