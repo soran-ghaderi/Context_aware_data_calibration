@@ -110,3 +110,8 @@ for k in range(2):
     print('second teta: {}\n'.format(teta))
     oAcc = reorientation(oAcc, 0, 0, teta)
     oMag = reorientation(oMag, 0, 0, teta)
+
+    if increaseSpeed(speed[index:index + 20] * np.mean(oAcc[1])) > 0:
+        oAcc = reorientation(oAcc, 0, 0, math.pi)
+        oMag = reorientation(oMag, 0, 0, math.pi)
+        print("turned")
