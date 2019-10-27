@@ -125,3 +125,7 @@ for k in range(2):
                                              alphaBetaFilter(oAcc[i], 0.01, 0)))) / 2 + summation[i]
         mse_sum[i] = mse_sum[i] + devMse(alphaBetaFilter(acc[i], 0.01, 0), alphaBetaFilter(oAcc[i], 0.01, 0))
         dtw_sum[i] = dtw.distance(alphaBetaFilter(acc[i], 0.01, 0), alphaBetaFilter(oAcc[i], 0.01, 0)) + dtw_sum[i]
+    for i in range(3):
+        summation[i + 3] = (np.mean(np.correlate(mag[i], oMag[i])) + 1) / 2 + summation[i + 3]
+        mse_sum[i + 3] = mse_sum[i + 3] + devMse(mag[i], oMag[i])
+        dtw_sum[i + 3] = dtw.distance(mag[i], oMag[i]) + dtw_sum[i + 3]
