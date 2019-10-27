@@ -139,3 +139,7 @@ for k in range(2):
     print('MSE:')
     for i in range(6):
         print(i, ') ', mse_sum[i] / b_mse_sum[i])
+
+    print('DTW:')
+    for i in range(6):
+        print(i, ') ', dtw_sum[i] / iter_num)
