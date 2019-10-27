@@ -133,3 +133,5 @@ for k in range(2):
     print(iter_num)
     print('====&final result&=====')
     print('cross correlation:')
+    for i in range(6):
+        print(i, ') ', summation[i] / iter_num)
