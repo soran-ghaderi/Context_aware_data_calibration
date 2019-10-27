@@ -104,3 +104,9 @@ for k in range(2):
     if np.mean(oAcc[2]) < 0:
         oAcc = reorientation(oAcc, 0, math.pi, 0)
         oMag = reorientation(oMag, 0, math.pi, 0)
+
+    # Final phase:
+    teta = math.atan(np.mean(oAcc[0, index:index + 20]) / np.mean(oAcc[1, index:index + 20]))
+    print('second teta: {}\n'.format(teta))
+    oAcc = reorientation(oAcc, 0, 0, teta)
+    oMag = reorientation(oMag, 0, 0, teta)
