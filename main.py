@@ -129,3 +129,7 @@ for k in range(2):
         summation[i + 3] = (np.mean(np.correlate(mag[i], oMag[i])) + 1) / 2 + summation[i + 3]
         mse_sum[i + 3] = mse_sum[i + 3] + devMse(mag[i], oMag[i])
         dtw_sum[i + 3] = dtw.distance(mag[i], oMag[i]) + dtw_sum[i + 3]
+
+    print(iter_num)
+    print('====&final result&=====')
+    print('cross correlation:')
