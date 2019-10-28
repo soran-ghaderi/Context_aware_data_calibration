@@ -12,3 +12,4 @@ class TestAlphaBetaFilter(TestCase):
         alpha = np.random.rand()
         beta = np.random.rand()
         res = alphaBetaFilter(x, alpha, beta)
+        self.assertIsNone(res, "successfully Tested.")
