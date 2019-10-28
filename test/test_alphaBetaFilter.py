@@ -6,7 +6,7 @@ class TestAlphaBetaFilter(TestCase):
     def test_alphaBetaFilter(self):
         """
 
-        :return:
+        :return:  Checks if 'res' is None or not
         """
         x = np.random.rand(6, 1)
         alpha = np.random.rand()
