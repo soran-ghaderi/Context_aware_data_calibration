@@ -8,3 +8,7 @@ class TestAlphaBetaFilter(TestCase):
 
         :return:
         """
+        x = np.random.rand(6, 1)
+        alpha = np.random.rand()
+        beta = np.random.rand()
+        res = alphaBetaFilter(x, alpha, beta)
