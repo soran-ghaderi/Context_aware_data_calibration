@@ -8,3 +8,6 @@ class TestDevMse(unittest.TestCase):
 
         :return:
         """
+        x = np.random.rand(6, 1)
+        y = np.random.rand(6, 1)
+        res = devMse(x, y)
