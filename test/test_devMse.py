@@ -11,3 +11,4 @@ class TestDevMse(unittest.TestCase):
         x = np.random.rand(6, 1)
         y = np.random.rand(6, 1)
         res = devMse(x, y)
+        self.assertIsNone(res, 'Successfully Tested.')
