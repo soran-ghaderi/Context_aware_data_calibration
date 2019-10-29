@@ -5,8 +5,7 @@ from mse import devMse
 class TestDevMse(unittest.TestCase):
     def test_devMse(self):
         """
-
-        :return:
+        :return:  Checks if 'res' is None or not
         """
         x = np.random.rand(6, 1)
         y = np.random.rand(6, 1)
