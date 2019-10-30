@@ -11,3 +11,6 @@ class TestDevMse(unittest.TestCase):
         y = np.random.rand(6, 1)
         res = devMse(x, y)
         self.assertIsNone(res, 'Successfully Tested.')
+
+if __name__ == '__main__':
+    unittest.main()
