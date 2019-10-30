@@ -10,3 +10,8 @@ class TestReorientation(TestCase):
 
         :return:
         """
+        teta_x = 2 * math.pi * secrets.SystemRandom().random()
+        teta_y = 2 * math.pi * secrets.SystemRandom().random()
+        teta_z = 2 * math.pi * secrets.SystemRandom().random()
+        v = np.random.rand(3, 3)
+        res = reorientation(v, teta_x, teta_y, teta_z)
