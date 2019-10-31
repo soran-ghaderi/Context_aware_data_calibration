@@ -1,6 +1,7 @@
 import math
 import numpy as np
 
+
 def reorientation(
         v: list[list],
         teta_x: float,
