@@ -77,6 +77,7 @@ def makeXZero(ax: list, az: lsit) -> float:
         theta_y = 0
     return theta_y
 
+
 for k in range(2):
     teta_x = 2 * math.pi * secrets.SystemRandom().random()
     teta_y = 2 * math.pi * secrets.SystemRandom().random()
